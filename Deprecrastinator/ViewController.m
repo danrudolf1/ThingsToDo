@@ -13,12 +13,11 @@
 @property (nonatomic) NSMutableArray *itemsArray;
 @property (nonatomic) UIAlertView *alert;
 @property (nonatomic) UIButton *deleteButton;
-@property (weak, nonatomic) NSIndexSet *indexesToDelete;
+@property (nonatomic) NSIndexSet *indexesToDelete;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOutlet;
 
 
-- (IBAction)addTask:(id)sender;
 
 @end
 
@@ -56,14 +55,6 @@
 
     
 }
-//- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Delete Task" message:@"Are You Sure You Want To Delete This Task?" delegate:self cancelButtonTitle:@"Cancel"otherButtonTitles:nil];
-//    [alert show];
-//    
-//    return @"Delete";
-//    
-//}
-
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
